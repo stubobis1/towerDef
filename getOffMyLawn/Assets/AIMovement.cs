@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class AIMovement : MonoBehaviour
+public class AIMovement : MonoBehaviour, IKillable
 {
     private int targetIndex = 0;
 
@@ -25,6 +25,11 @@ public class AIMovement : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void Kill()
+    {
+        Destroy(this.gameObject);
     }
 
     public void HitTrigger(Waypoint other)
