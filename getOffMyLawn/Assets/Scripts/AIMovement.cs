@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEditor;
 using UnityEngine;
 
-public class AIMovement : MonoBehaviour, IKillable
+public class AIMovement : MonoBehaviour, IKillable, IHasWaypoints
 {
+    public WaypointHandler Waypoints { get; set; }
     private int targetIndex = 0;
 
 
     public float Speed = 0.2f;
     // Start is called before the first frame update
-    public WaypointHandler Waypoints;
     public Waypoint[] Targets;
     private Rigidbody body;
     void Start()
@@ -38,8 +39,8 @@ public class AIMovement : MonoBehaviour, IKillable
             if (targetIndex + 1 >= Targets.Length)
             {
                 print("AI Hit last Trigger, calling death");
-                GameManager.Instance.EnemyGotThrough(this.gameObject);
                 Destroy(this.gameObject);
+                GameManager.Instance.EnemyGotThrough(this.gameObject);
             }
 
             else
