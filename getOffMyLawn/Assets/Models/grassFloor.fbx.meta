@@ -1211,12 +1211,22 @@ ModelImporter:
     3300600: pathBase.001|grass|Dupli|99.0.0.0.0.0.0.0.0.0
     4300000: pathBase.001
     4300002: pathBase.001|grass|Dupli|0.0.0.0.0.0.0.0.0.0
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grass
+    second: {fileID: 2100000, guid: 8e0aa9f6247989544b9c88be5e0ee25a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grassFloor
+    second: {fileID: 2100000, guid: d73a2b0e93d380043a7fd7c8e2f594f6, type: 2}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
