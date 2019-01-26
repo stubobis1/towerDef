@@ -9,8 +9,7 @@ public class AIMovement : MonoBehaviour
     private int targetIndex = 0;
 
 
-    public float Speed = 1f;
-    public float Acceleration = 1f;
+    public float Speed = 0.2f;
     // Start is called before the first frame update
     public WaypointHandler Waypoints;
     public Waypoint[] Targets;
@@ -33,7 +32,7 @@ public class AIMovement : MonoBehaviour
         //if (other == Targets[targetIndex]) {
             if (targetIndex + 1 >= Targets.Length)
             {
-                print("THISNHISXNINFS");
+                print("AI Hit last Trigger, calling death");
                 GameManager.Instance.EnemyGotThrough(this.gameObject);
                 Destroy(this.gameObject);
             }
@@ -50,6 +49,6 @@ public class AIMovement : MonoBehaviour
     {
         transform.LookAt(Targets[targetIndex].transform);
         body.AddForce(transform.forward * Speed,ForceMode.VelocityChange);
-        body.velocity = Vector3.Lerp(body.velocity,transform.forward * Speed, Acceleration); 
+        //body.velocity = Vector3.Lerp(body.velocity,transform.forward * Speed, Acceleration); 
     }
 }
