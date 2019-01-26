@@ -47,4 +47,5 @@ MonoBehaviour:
   waypoints: {fileID: 0}
   EnemyPrefabs:
   - {fileID: 3027260909677617801, guid: ed45ff851fcc36746b7af818929a9a67, type: 3}
+  - {fileID: 3027260909677617801, guid: 96d5945d27ce1624ab8910b56548c2d1, type: 3}
   SendInterval: 3
