@@ -10,11 +10,18 @@ public class ThrowController : MonoBehaviour
     public float increaseRate = 0.1f;
     public List<Component> components = new List<Component>();
     public Camera playerCam;
+    public Transform throwPoint;
     // Start is called before the first frame update
     void Start()
     {
         if (!playerCam)
             this.playerCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        if (components.Count < 1)
+            throw new System.Exception("we need somthing to throw");
+
+        if (!throwPoint)
+            throwPoint = playerCam.transform;
+
         this.power = this.initPower; 
     }
 
@@ -36,6 +43,7 @@ public class ThrowController : MonoBehaviour
     {
         var index = Random.Range(0, this.components.Count);
         var obj = Instantiate(this.components[index]);
+        obj.transform.position = throwPoint.position;
         var rb = obj.GetComponent<Rigidbody>();
         if (!rb)
             throw new System.Exception("created obj does not have rigid body");

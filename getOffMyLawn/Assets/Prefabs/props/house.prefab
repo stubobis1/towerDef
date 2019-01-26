@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4346736823312838208}
   - component: {fileID: 6227666253362693973}
   - component: {fileID: 1338893399818731912}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,9 +89,9 @@ GameObject:
   - component: {fileID: 8839783598782554062}
   - component: {fileID: 213038797788423561}
   - component: {fileID: 4903952135911483303}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: house
-  m_TagString: Untagged
+  m_TagString: props
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
