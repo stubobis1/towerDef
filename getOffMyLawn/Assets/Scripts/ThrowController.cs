@@ -41,6 +41,7 @@ public class ThrowController : MonoBehaviour
     
     void Fire()
     {
+       Event.n
         var index = Random.Range(0, this.components.Count);
         var obj = Instantiate(this.components[index]);
         obj.transform.position = throwPoint.position;
