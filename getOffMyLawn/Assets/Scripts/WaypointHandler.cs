@@ -5,4 +5,9 @@ using UnityEngine;
 public class WaypointHandler : MonoBehaviour
 {
     public Waypoint[] Waypoints;
+
+    private void Start()
+    {
+        Waypoints = GetComponentsInChildren<Waypoint>();
+    }
 }

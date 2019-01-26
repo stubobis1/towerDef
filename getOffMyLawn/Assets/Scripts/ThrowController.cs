@@ -26,16 +26,24 @@ public class ThrowController : MonoBehaviour
     }
 
     // Update is called once per frame
+    private float timeToFireNext;
+    public float cooldown;
     void FixedUpdate()
     {
-        if (Input.GetButton("Fire1"))
+        if (Time.time > timeToFireNext)
         {
-            this.power += increaseRate;
-        }
-        if (Input.GetButtonUp("Fire1"))
-        {
-            Fire();
-            this.power = this.initPower;
+            if (Input.GetButton("Fire1"))
+            {
+                this.power += increaseRate;
+            }
+
+            if (Input.GetButtonUp("Fire1"))
+            {
+                Fire();
+                this.power = this.initPower;
+                timeToFireNext = Time.time + cooldown;
+            }
+            
         }
     }
     
