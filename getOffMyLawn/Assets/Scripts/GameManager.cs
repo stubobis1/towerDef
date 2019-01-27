@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = System.Object;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,40 +16,98 @@ public class GameManager : MonoBehaviour
 
     public int Level = -1;
 
-    public List<GameObject[]> Levels = new List<GameObject[]>(); //Each item in the array will be an array of enemies to send.
+    public List<Wave> HordeWaves = new List<Wave>(); //Each item in the array will be an array of enemies to send.
 
-    #region Levels
-
-    
-
-    List<GameObject[]> GetLevels()
+    public class Wave
     {
-        var l = new List<GameObject[]>(); 
-        //Level 1
-        l.Add( new []{
-            Enemy1,
-            Enemy1,
-            Enemy1,
-            Enemy1,
-            Enemy1,
-        }); 
-        //Level 2
-        l.Add( new []{
-            Enemy1,
-            Enemy2,
-            Enemy2,
-            Enemy1,
-            Enemy2,
-            Enemy1,
-        }); 
-        //Level 3
-        l.Add( new []{
-            Enemy2,
-            Enemy2,
-            Enemy2,
-            Enemy2,
-            Enemy2,
-        });
+        public Wave(float t, GameObject[] e)
+        {
+            this.enemies = e;
+            this.time = t;            
+        }
+    
+        public float time;
+        public GameObject[] enemies;
+    }
+
+    #region Horde
+
+    GameObject[] getArrayOfUnit(GameObject o , int amount)
+    {
+        var go = new GameObject[amount];
+        
+      
+        for (int i = 0; i < amount; i++)
+        {
+            go[i] = o;
+        }
+        return go;
+    }
+
+
+    List<Wave> GetWaves()
+    {
+        var l = new List<Wave>(); 
+
+        l.Add(new Wave(
+            10f, 
+            getArrayOfUnit(Enemy1, 20)
+        )); 
+
+        l.Add(new Wave(
+            10f, 
+            getArrayOfUnit(Enemy1, 40)
+        )); 
+
+        l.Add(new Wave(
+            10f, 
+            getArrayOfUnit(Enemy1, 60)
+        )); 
+
+        l.Add(new Wave(
+            10f, 
+            getArrayOfUnit(Enemy1, 80)
+        )); 
+
+        l.Add(new Wave(
+            10f, 
+            getArrayOfUnit(Enemy1, 80)
+        )); 
+        //1:00
+        l.Add(new Wave(
+            10f, 
+            getArrayOfUnit(Enemy1, 2)
+        )); 
+
+        l.Add(new Wave(
+            10f, 
+            getArrayOfUnit(Enemy1, 2)
+        )); 
+
+        l.Add(new Wave(
+            10f, 
+            getArrayOfUnit(Enemy1, 2)
+        )); 
+
+        l.Add(new Wave(
+            10f, 
+            getArrayOfUnit(Enemy1, 2)
+        )); 
+
+        l.Add(new Wave(
+            10f, 
+            getArrayOfUnit(Enemy1, 2)
+        )); 
+        //1:50 
+        l.Add(new Wave(
+            10f, 
+            getArrayOfUnit(Enemy1, 2)
+        )); 
+        
+      
+
+        
+        
         return l;
     }
     
@@ -58,7 +117,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Instance = this;
-        this.Levels = GetLevels();
+        this.HordeWaves = GetWaves();
     }
 
     bool GameStarted = false;
@@ -66,21 +125,21 @@ public class GameManager : MonoBehaviour
     {
         GameStarted = true;
         print("Starting Game!");
-        Level = 0;
-        AIManager.Instance.EnemiesInWave = Levels[0];
     }
-    
-    
-    
+
+
+    private int indexofHorde;
+    private float nextWaveTime;
     void Update()
     {
         if(!GameStarted)
             StartGame();
 
-        if (Input.GetButtonDown("Fire1") && !AIManager.Instance.activelySending)
+        if (Time.time > nextWaveTime)
         {
-            //start if we haven't yet.
-            AIManager.Instance.activelySending = true;
+            AIManager.Instance.SendWave(HordeWaves[indexofHorde].enemies);
+            nextWaveTime = Time.time + HordeWaves[indexofHorde].time;
+            indexofHorde++;
         }
     }
 
@@ -88,15 +147,6 @@ public class GameManager : MonoBehaviour
     {
     }
 
-    public void FinishedLevel()
-    {
-        print("Finished Level: " + Level);
-        Level++;
-        AIManager.Instance.EnemiesInWave = Levels[Level];
-        
-        
-        
-    }
     
     // Update is called once per frame
 
