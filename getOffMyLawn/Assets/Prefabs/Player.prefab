@@ -232,9 +232,8 @@ MonoBehaviour:
   - {fileID: 4398299596996157658, guid: 38a7c401944a67047bbb4d4e696be1cb, type: 3}
   - {fileID: 7102940967190349023, guid: eb797b9497ca40a42bf8e0dc59b060fd, type: 3}
   - {fileID: 7918141462299981882, guid: 7c9d53fd675aafb44aa2fbd88a2848d4, type: 3}
-  - {fileID: 8845148594176514172, guid: 53592ee574aa715489c3344532993784, type: 3}
-  - {fileID: 5211381418113999543, guid: b1af417780b15bf47a3be1a00fc19550, type: 3}
   - {fileID: 1919378551699701953, guid: 04cd9611d2b3e104bac62482a6e08fab, type: 3}
+  - {fileID: 5211381418113999543, guid: b1af417780b15bf47a3be1a00fc19550, type: 3}
   playerCam: {fileID: 0}
   throwPoint: {fileID: 4679719490534923169}
   foo:
@@ -268,7 +267,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8002044749390204948}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.83, z: 5.08}
+  m_LocalPosition: {x: 0, y: -0.32, z: 2.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4456837003051435531}
