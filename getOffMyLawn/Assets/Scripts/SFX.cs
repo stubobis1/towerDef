@@ -23,6 +23,6 @@ public class SFX : MonoBehaviour
     }
     public void Throw()
     {
-        source.PlayOneShot(explostionSounds[Random.Range(0,throwSounds.Length)]);
+        source.PlayOneShot(throwSounds[Random.Range(0,throwSounds.Length)]);
     }
 }

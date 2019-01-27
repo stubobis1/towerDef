@@ -32,6 +32,9 @@ public class Esplosems : MonoBehaviour
 
     public void boom()
     {
+        
+
+        
         Vector3 explosionPos = transform.position;
         Collider[] colliders = Physics.OverlapSphere(explosionPos, radius);
         foreach (Collider hit in colliders)
@@ -43,6 +46,9 @@ public class Esplosems : MonoBehaviour
             print("boom");
 
             // play sound
+            SFX.Instance.Explode();
+            
+            
             var killable = hit.gameObject.GetComponent<AIMovement>();
             if ( killable != null)
             {
@@ -52,5 +58,7 @@ public class Esplosems : MonoBehaviour
                 GameManager.Instance.scoreDeaths++;
             }
         }
+        
+        Destroy(this.gameObject);
     }
 }

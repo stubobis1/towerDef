@@ -45,7 +45,7 @@ public class ThrowController : MonoBehaviour
     void Fire()
     {
         GameManager.Instance.scoreShotsFired++;
-        SFX.Instance.Explode();
+        SFX.Instance.Throw();
         
         var index = Random.Range(0, this.components.Count);
         var obj = Instantiate(this.components[index]);

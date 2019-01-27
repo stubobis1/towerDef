@@ -73,7 +73,8 @@ MonoBehaviour:
   explostionSounds:
   - {fileID: 8300000, guid: 1fbbca8183f8efb4a867d0776835eb19, type: 3}
   - {fileID: 8300000, guid: 1c594e33bd005eb4f8bb2f4fab16cfd2, type: 3}
-  throwSounds: []
+  throwSounds:
+  - {fileID: 8300000, guid: 0b52f352f99b6764ba2784b06a9f02cc, type: 3}
   BGM: {fileID: 8300000, guid: 81da74823fc25d0409d7ce680c117c5f, type: 3}
 --- !u!82 &7470489708414756683
 AudioSource:
