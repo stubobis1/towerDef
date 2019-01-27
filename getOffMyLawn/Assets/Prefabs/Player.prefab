@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4456837003051435573}
   - component: {fileID: 4456837003051435530}
   - component: {fileID: 4456837003051435572}
+  - component: {fileID: 1800514677}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -103,6 +104,15 @@ MonoBehaviour:
   targetDirection: {x: 0, y: 0}
   targetCharacterDirection: {x: 0, y: 0}
   characterBody: {fileID: 0}
+--- !u!45 &1800514677
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4456837003051435528}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 21afddbf8ed3c254ea7ec18ef8151e60, type: 2}
 --- !u!1 &4456837003433654268
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,6 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46041b24a16a6ab45b357a85aea33963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
   maxBoutns: 4.4
   minBounds: -4.5
 --- !u!114 &130310895
