@@ -58,58 +58,86 @@ public class GameManager : MonoBehaviour
 
         l.Add(new Wave(
             10f, 
-            getArrayOfUnit(Enemy1, 20)
+            getArrayOfUnit(Enemy1, 2)
         )); 
 
         l.Add(new Wave(
             10f, 
-            getArrayOfUnit(Enemy2, 40)
+            getArrayOfUnit(Enemy2, 4)
         )); 
 
         l.Add(new Wave(
             10f, 
-            getArrayOfUnit(Enemy1, 60)
+            getArrayOfUnit(Enemy1, 8)
         )); 
 
         l.Add(new Wave(
             10f, 
-            getArrayOfUnit(Enemy2, 80)
+            getArrayOfUnit(Enemy2, 16)
         )); 
 
         l.Add(new Wave(
             10f, 
-            getArrayOfUnit(Enemy1, 80)
+            getArrayOfUnit(Enemy1, 30)
         )); 
         //1:00
         l.Add(new Wave(
             10f, 
-            getArrayOfUnit(Enemy2, 2)
+            getArrayOfUnit(Enemy2, 40)
+        ));
+
+        l.Add(new Wave(
+            5f,
+            getArrayOfUnit(Enemy1, 25)
+        ));
+        l.Add(new Wave(
+            5f, 
+            getArrayOfUnit(Enemy1, 25)
         )); 
 
         l.Add(new Wave(
-            10f, 
-            getArrayOfUnit(Enemy1, 2)
+            5f,
+            getArrayOfUnit(Enemy1, 40)
+        ));
+        l.Add(new Wave(
+            5f, 
+            getArrayOfUnit(Enemy1, 40)
         )); 
 
         l.Add(new Wave(
-            10f, 
-            getArrayOfUnit(Enemy1, 2)
+            5f,
+            getArrayOfUnit(Enemy1, 40)
+        ));
+        l.Add(new Wave(
+            5f, 
+            getArrayOfUnit(Enemy1, 40)
         )); 
 
         l.Add(new Wave(
-            10f, 
-            getArrayOfUnit(Enemy1, 2)
-        )); 
-
+            2f,
+            getArrayOfUnit(Enemy1, 40)
+        ));
         l.Add(new Wave(
-            10f, 
-            getArrayOfUnit(Enemy1, 2)
+            2f,
+            getArrayOfUnit(Enemy1, 40)
+        ));
+        l.Add(new Wave(
+            1f,
+            getArrayOfUnit(Enemy1, 40)
+        ));
+        l.Add(new Wave(
+            5f, 
+            getArrayOfUnit(Enemy1, 40)
         )); 
         //1:50 
         l.Add(new Wave(
-            10f, 
-            getArrayOfUnit(Enemy1, 2)
-        )); 
+            5f,
+            getArrayOfUnit(Enemy1, 25)
+        ));
+        l.Add(new Wave(
+            5f, 
+            getArrayOfUnit(Enemy1, 25)
+        ));  
         
       
 
