@@ -57,6 +57,10 @@ MonoBehaviour:
   scoreDoorPoint: 0
   scoreShotsFired: 0
   Level: 0
+  maxCash: 0
+  currentCash: 0
+  cashPerShot: 0
+  cashPerLoss: 0
 --- !u!114 &5323808043500283316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,6 +79,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1c594e33bd005eb4f8bb2f4fab16cfd2, type: 3}
   throwSounds:
   - {fileID: 8300000, guid: 0b52f352f99b6764ba2784b06a9f02cc, type: 3}
+  moneySounds:
+  - {fileID: 8300000, guid: 308154c2289658943af9fedfcc93c354, type: 3}
+  - {fileID: 8300000, guid: 16ac170e778a77a43be4de0f6fbfc957, type: 3}
   BGM: {fileID: 8300000, guid: 81da74823fc25d0409d7ce680c117c5f, type: 3}
 --- !u!82 &7470489708414756683
 AudioSource:

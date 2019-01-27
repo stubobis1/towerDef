@@ -153,6 +153,11 @@ public class GameManager : MonoBehaviour
     
     #endregion
 
+    public float maxCash;
+    public float currentCash;
+    public float cashPerShot;
+    public float cashPerLoss;
+
     void Start()
     {
         Cursor.visible = false;
@@ -185,6 +190,8 @@ public class GameManager : MonoBehaviour
 
     public void EnemyGotThrough(GameObject enemy)
     {
+        currentCash -= cashPerLoss;
+        SFX.Instance.ChaChing();
     }
 
     
