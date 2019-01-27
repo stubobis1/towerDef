@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1058868039636347008}
   - component: {fileID: 5624740428419467803}
   m_Layer: 0
-  m_Name: house 1
+  m_Name: house
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1129439464403890986}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
   m_LocalPosition: {x: 22.610762, y: -1.7299786, z: 6.675113}
-  m_LocalScale: {x: 100, y: 200, z: 100}
+  m_LocalScale: {x: 547.05, y: 983.6568, z: 500}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!33 &1058868039636347008
 MeshFilter:
   m_ObjectHideFlags: 0

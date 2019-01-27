@@ -11,6 +11,7 @@ public class ThrowController : MonoBehaviour
     public List<Component> components = new List<Component>();
     public Camera playerCam;
     public Transform throwPoint;
+    public AnimationCurve foo;
     // Start is called before the first frame update
     void Start()
     {
@@ -55,7 +56,8 @@ public class ThrowController : MonoBehaviour
         var rb = obj.GetComponent<Rigidbody>();
         if (!rb)
             throw new System.Exception("created obj does not have rigid body");
-        rb.AddForce(this.playerCam.transform.forward * this.power, ForceMode.Impulse);
+        //rb.AddForce(this.playerCam.transform.forward * this.power, ForceMode.Impulse);
+        rb.velocity = this.playerCam.transform.forward * this.power;
 
     }
 }
