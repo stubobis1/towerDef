@@ -16,12 +16,8 @@ public class KillPlane : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerExit(Collider other)
     {
-        var obj = other.GetComponent<IKillable>();
-        if (obj != null)
-        {
-            obj.Kill();
-        }
+        Destroy(other.gameObject);
     }
 }
