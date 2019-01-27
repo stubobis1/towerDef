@@ -1059,28 +1059,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 130310895, guid: 8fda285f308aa9840b5da154797b4cd0, type: 3}
-      propertyPath: components.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 130310895, guid: 8fda285f308aa9840b5da154797b4cd0, type: 3}
-      propertyPath: cooldown
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 130310895, guid: 8fda285f308aa9840b5da154797b4cd0, type: 3}
-      propertyPath: components.Array.data[4]
-      value: 
-      objectReference: {fileID: 5211381418113999543, guid: b1af417780b15bf47a3be1a00fc19550,
-        type: 3}
-    - target: {fileID: 130310895, guid: 8fda285f308aa9840b5da154797b4cd0, type: 3}
-      propertyPath: components.Array.data[1]
-      value: 
-      objectReference: {fileID: 1919378551699701953, guid: 04cd9611d2b3e104bac62482a6e08fab,
-        type: 3}
-    - target: {fileID: 130310895, guid: 8fda285f308aa9840b5da154797b4cd0, type: 3}
-      propertyPath: increaseRate
-      value: 0.7
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fda285f308aa9840b5da154797b4cd0, type: 3}
 --- !u!1001 &757269458
