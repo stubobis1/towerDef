@@ -26,10 +26,16 @@ public class CountDown : MonoBehaviour
        if(timeLeft >= 60 && timeLeft != 120)
         {
            timeOneMin = timeLeft - 60;
-            countdown.text = ("1:") + timeOneMin;
-      
+            countdown.text = ("1:") + timeOneMin;      
         }
-        if(timeLeft < 60)
+
+        if (timeLeft <= 69)
+        {
+            timeOneMin = timeLeft - 60;
+            countdown.text = ("1:0" + timeOneMin);
+        }
+
+        if (timeLeft < 60)
         {
             countdown.text = ("0:" + timeLeft);
         }

@@ -229,6 +229,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8634762935454569486, guid: a96a696790a6e4c4ca0c0f43e8783100,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634762935454569486, guid: a96a696790a6e4c4ca0c0f43e8783100,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634762935454569486, guid: a96a696790a6e4c4ca0c0f43e8783100,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -30
+      objectReference: {fileID: 0}
     - target: {fileID: 8634762935454569487, guid: a96a696790a6e4c4ca0c0f43e8783100,
         type: 3}
       propertyPath: timeLeft
