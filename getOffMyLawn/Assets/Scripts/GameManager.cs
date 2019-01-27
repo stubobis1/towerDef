@@ -116,6 +116,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        Cursor.visible = false;
         Instance = this;
         this.HordeWaves = GetWaves();
     }

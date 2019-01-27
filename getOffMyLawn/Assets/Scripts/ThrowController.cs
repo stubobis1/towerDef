@@ -37,6 +37,7 @@ public class ThrowController : MonoBehaviour
     {
         var index = Random.Range(0, this.components.Count);
         var obj = Instantiate(this.components[index]);
+        obj.gameObject.AddComponent<Esplosems>();
         obj.transform.position = throwPoint.position;
         obj.transform.rotation = Random.rotation;
         var rb = obj.GetComponent<Rigidbody>();
@@ -44,5 +45,6 @@ public class ThrowController : MonoBehaviour
             throw new System.Exception("created obj does not have rigid body");
         //rb.AddForce(this.playerCam.transform.forward * this.power, ForceMode.Impulse);
         rb.velocity = this.playerCam.transform.forward * this.power;
+
     }
 }

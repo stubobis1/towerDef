@@ -5,14 +5,34 @@ using UnityEngine;
 public class Esplosems : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    public float radius = 10;
+    public float power = 1000;
+    public float upwardsModifier = 3;
+    public int ammo = 1;
+
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        if(ammo > 0)
+        {
+            ammo--;
+            boom();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void boom()
     {
-        
+        Vector3 explosionPos = transform.position;
+        Collider[] colliders = Physics.OverlapSphere(explosionPos, radius);
+        foreach (Collider hit in colliders)
+        {
+            Rigidbody rb = hit.GetComponent<Rigidbody>();
+
+            if (rb != null)
+                rb.AddExplosionForce(power, explosionPos, radius, upwardsModifier);
+            print("boom");
+            // play sound
+            // set to dead.
+            // tally dead
+        }
     }
 }
