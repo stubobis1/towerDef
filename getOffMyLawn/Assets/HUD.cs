@@ -29,9 +29,8 @@ public class HUD : MonoBehaviour
         {
             
             var theBarRectTransform = MoneyBar.transform as RectTransform;
-            var precentage = value / 100f;
             //THIS IS HARDCODED
-            theBarRectTransform.sizeDelta = new Vector2 ((Screen.width * 4) * precentage  , theBarRectTransform.sizeDelta.y);
+            theBarRectTransform.sizeDelta = new Vector2 ((Screen.width * 4) * value  , theBarRectTransform.sizeDelta.y);
 /*
             Rect r = new Rect(this.MoneyBar.rectTransform.rect);
             r.width = value / Screen.width;
@@ -51,7 +50,5 @@ public class HUD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PrecentageOfMoney = 50f;
-        Lives = _lives;
     }
 }

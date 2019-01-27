@@ -155,8 +155,11 @@ public class GameManager : MonoBehaviour
 
     public float maxCash;
     public float currentCash;
+    public float cashGainSpeed;
     public float cashPerShot;
     public float cashPerLoss;
+
+    public bool hasMoneyToFire;
 
     void Start()
     {
@@ -186,6 +189,12 @@ public class GameManager : MonoBehaviour
             nextWaveTime = Time.time + HordeWaves[indexofHorde].time;
             indexofHorde++;
         }
+        currentCash += cashGainSpeed * Time.deltaTime;
+
+        hasMoneyToFire = (currentCash > cashPerShot); 
+        
+
+        HUD.Instance.PrecentageOfMoney = currentCash / maxCash;
     }
 
     public void EnemyGotThrough(GameObject enemy)
@@ -194,7 +203,17 @@ public class GameManager : MonoBehaviour
         SFX.Instance.ChaChing();
     }
 
-    
+    public void Throw()
+    {
+        currentCash -= cashPerShot;
+    }
+
+    public void cantFire()
+    {
+        SFX.Instance.Nope();
+    }
+
+
     // Update is called once per frame
 
 }

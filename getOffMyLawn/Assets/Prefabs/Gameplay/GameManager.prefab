@@ -57,10 +57,12 @@ MonoBehaviour:
   scoreDoorPoint: 0
   scoreShotsFired: 0
   Level: 0
-  maxCash: 0
+  maxCash: 100
   currentCash: 0
-  cashPerShot: 0
-  cashPerLoss: 0
+  cashGainSpeed: 3
+  cashPerShot: 10
+  cashPerLoss: 10
+  hasMoneyToFire: 0
 --- !u!114 &5323808043500283316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,6 +85,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 308154c2289658943af9fedfcc93c354, type: 3}
   - {fileID: 8300000, guid: 16ac170e778a77a43be4de0f6fbfc957, type: 3}
   BGM: {fileID: 8300000, guid: 81da74823fc25d0409d7ce680c117c5f, type: 3}
+  nopeSounds:
+  - {fileID: 8300000, guid: bc22197981fff234289792de8215cf9d, type: 3}
 --- !u!82 &7470489708414756683
 AudioSource:
   m_ObjectHideFlags: 0

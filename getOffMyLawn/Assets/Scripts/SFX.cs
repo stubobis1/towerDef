@@ -10,6 +10,7 @@ public class SFX : MonoBehaviour
     public AudioClip[] throwSounds;
     public AudioClip[] moneySounds;
     public AudioClip BGM;
+    public AudioClip[] nopeSounds;
     
     // Use this for initialization
     void Start()
@@ -30,5 +31,9 @@ public class SFX : MonoBehaviour
     public void ChaChing()
     {
         source.PlayOneShot(moneySounds[Random.Range(0,moneySounds.Length)]);
+    }
+    public void Nope()
+    {
+        source.PlayOneShot(nopeSounds[Random.Range(0,nopeSounds.Length)]);
     }
 }
