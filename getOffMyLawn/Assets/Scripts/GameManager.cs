@@ -10,9 +10,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     public GameObject Enemy1;
     public GameObject Enemy2;
-    public GameObject Enemy3;
-    public GameObject Enemy4;
-    public GameObject Enemy5;
 
     public float explosionRadius = 5;
     public float explosionForce = 10;
@@ -64,7 +61,7 @@ public class GameManager : MonoBehaviour
 
         l.Add(new Wave(
             10f, 
-            getArrayOfUnit(Enemy1, 40)
+            getArrayOfUnit(Enemy2, 40)
         )); 
 
         l.Add(new Wave(
@@ -74,7 +71,7 @@ public class GameManager : MonoBehaviour
 
         l.Add(new Wave(
             10f, 
-            getArrayOfUnit(Enemy1, 80)
+            getArrayOfUnit(Enemy2, 80)
         )); 
 
         l.Add(new Wave(
@@ -84,7 +81,7 @@ public class GameManager : MonoBehaviour
         //1:00
         l.Add(new Wave(
             10f, 
-            getArrayOfUnit(Enemy1, 2)
+            getArrayOfUnit(Enemy2, 2)
         )); 
 
         l.Add(new Wave(

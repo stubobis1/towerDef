@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3159532435117284401}
   - component: {fileID: 5323808043500283316}
   - component: {fileID: 7470489708414756683}
+  - component: {fileID: 5285843336855350444}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -45,11 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1d53b750e499d8418b4bb892c6e0dc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy1: {fileID: 3027260909677617801, guid: ed45ff851fcc36746b7af818929a9a67, type: 3}
-  Enemy2: {fileID: 3027260909677617801, guid: 96d5945d27ce1624ab8910b56548c2d1, type: 3}
-  Enemy3: {fileID: 0}
-  Enemy4: {fileID: 0}
-  Enemy5: {fileID: 0}
+  Enemy1: {fileID: 6636792527569943231, guid: 9d5e88158923c68499b2a2f0dfabee39, type: 3}
+  Enemy2: {fileID: 8793798039555149611, guid: 76c7d8f8cd1f80c47ba5e3da56b4f7e6, type: 3}
   explosionRadius: 5
   explosionForce: 10
   explosionUpModifier: 3
@@ -172,3 +170,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5285843336855350444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3159532435117284400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b07f370aa4d89da4f99f78b954ceb4c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activelySending: 0
+  waypoints: {fileID: 0}
+  EnemiesInWave: []
+  EnemyIndex: 0
+  SendInterval: 3
