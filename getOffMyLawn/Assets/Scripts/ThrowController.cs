@@ -38,6 +38,7 @@ public class ThrowController : MonoBehaviour
         var index = Random.Range(0, this.components.Count);
         var obj = Instantiate(this.components[index]);
         obj.transform.position = throwPoint.position;
+        obj.transform.rotation = Random.rotation;
         var rb = obj.GetComponent<Rigidbody>();
         if (!rb)
             throw new System.Exception("created obj does not have rigid body");
