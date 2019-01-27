@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Threading;
-using UnityEngine.SceneManagement;
+
 public class CountDown : MonoBehaviour
 {
     public int timeLeft = 120;
@@ -45,7 +45,7 @@ public class CountDown : MonoBehaviour
         }
         if (timeLeft <= 0)
         {
-            SceneManager.LoadScene("GameOver");
+            GameManager.Instance.GameOver();
 
         }
     }
