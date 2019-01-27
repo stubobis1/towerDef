@@ -9,7 +9,6 @@ public class Esplosems : MonoBehaviour
     public float power = 1000;
     public float upwardsModifier = 3;
 
-    public ParticleSystem particleEffect;
     public int ammo = 1;
 
     private void Start()
@@ -33,7 +32,7 @@ public class Esplosems : MonoBehaviour
     public void boom()
     {
         
-
+        
         
         Vector3 explosionPos = transform.position;
         Collider[] colliders = Physics.OverlapSphere(explosionPos, radius);
@@ -58,6 +57,10 @@ public class Esplosems : MonoBehaviour
                 GameManager.Instance.scoreDeaths++;
             }
         }
+        
+        var e = Instantiate(GameManager.Instance.Explosion);
+        e.transform.position = this.transform.position;
+        
         
         Destroy(this.gameObject);
     }

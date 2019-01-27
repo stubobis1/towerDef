@@ -18,6 +18,7 @@ public class AIManager : MonoBehaviour
     void Start()
     {
         Instance = this;
+        waypoints = WaypointHandler.instance;
     }
 
     // Update is called once per frame

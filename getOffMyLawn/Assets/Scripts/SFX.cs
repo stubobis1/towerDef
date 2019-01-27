@@ -15,6 +15,7 @@ public class SFX : MonoBehaviour
     {
         source = source == null ? this.GetComponent<AudioSource>() : source;
         Instance = this;
+        SFX.Instance.source.PlayOneShot(SFX.Instance.BGM);
     }
 
     public void Explode()

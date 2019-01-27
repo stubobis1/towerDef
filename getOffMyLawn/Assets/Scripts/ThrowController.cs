@@ -10,6 +10,7 @@ public class ThrowController : MonoBehaviour
     public Camera playerCam;
     public Transform throwPoint;
     public AnimationCurve foo;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +20,6 @@ public class ThrowController : MonoBehaviour
             throw new System.Exception("we need somthing to throw");
         if (!throwPoint)
             throwPoint = playerCam.transform;
-
-        SFX.Instance.source.PlayOneShot(SFX.Instance.BGM);
     }
 
     // Update is called once per frame
@@ -58,6 +57,5 @@ public class ThrowController : MonoBehaviour
         rb.velocity = this.playerCam.transform.forward * this.power;
         var rotForce = 10000f * Random.value;
         rb.AddTorque(new Vector3(Random.value * rotForce, Random.value * rotForce, Random.value * rotForce));
-
     }
 }

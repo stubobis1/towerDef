@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public GameObject Enemy1;
     public GameObject Enemy2;
 
+    public GameObject Explosion;
+
     public float explosionRadius = 5;
     public float explosionForce = 10;
     public float explosionUpModifier = 3;

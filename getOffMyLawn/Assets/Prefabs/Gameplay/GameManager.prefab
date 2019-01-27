@@ -48,8 +48,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy1: {fileID: 6636792527569943231, guid: 9d5e88158923c68499b2a2f0dfabee39, type: 3}
   Enemy2: {fileID: 8793798039555149611, guid: 76c7d8f8cd1f80c47ba5e3da56b4f7e6, type: 3}
+  Explosion: {fileID: 3653181172002046076, guid: d2b663370c13fb8479ef774e2858f48c,
+    type: 3}
   explosionRadius: 5
-  explosionForce: 10
+  explosionForce: 4000
   explosionUpModifier: 3
   scoreDeaths: 0
   scoreDoorPoint: 0
