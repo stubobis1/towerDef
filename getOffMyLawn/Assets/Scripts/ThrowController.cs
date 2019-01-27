@@ -24,12 +24,19 @@ public class ThrowController : MonoBehaviour
     // Update is called once per frame
     private float timeToFireNext;
     public float cooldown;
-    void FixedUpdate()
+    void Update()
     {
-        if (Time.time > timeToFireNext && Input.GetButtonUp("Fire1"))
-        {
-            Fire();
-            timeToFireNext = Time.time + cooldown;
+        if (Input.GetButtonDown("Fire1"))
+        { 
+            if (Time.time > timeToFireNext)
+            {
+                Fire();
+                timeToFireNext = Time.time + cooldown;
+            }
+            else
+            {
+                print("COOLDOWN");
+            }
         }
     }
     
@@ -46,6 +53,8 @@ public class ThrowController : MonoBehaviour
             throw new System.Exception("created obj does not have rigid body");
         //rb.AddForce(this.playerCam.transform.forward * this.power, ForceMode.Impulse);
         rb.velocity = this.playerCam.transform.forward * this.power;
+        var rotForce = 10000f * Random.value;
+        rb.AddTorque(new Vector3(Random.value * rotForce, Random.value * rotForce, Random.value * rotForce));
 
     }
 }

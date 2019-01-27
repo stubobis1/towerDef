@@ -238,7 +238,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  cooldown: 0.3
+  cooldown: 0.1
 --- !u!1 &8002044749390204948
 GameObject:
   m_ObjectHideFlags: 0
