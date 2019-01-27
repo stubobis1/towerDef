@@ -31,12 +31,13 @@ public class ThrowController : MonoBehaviour
     public float cooldown;
     void FixedUpdate()
     {
-        if (Time.time > timeToFireNext)
-        {
             if (Input.GetButton("Fire1"))
             {
                 this.power += increaseRate;
             }
+
+        if (Time.time > timeToFireNext)
+        {
 
             if (Input.GetButtonUp("Fire1"))
             {
