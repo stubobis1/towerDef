@@ -14,6 +14,14 @@ public class GameManager : MonoBehaviour
     public GameObject Enemy4;
     public GameObject Enemy5;
 
+    public float explosionRadius = 5;
+    public float explosionForce = 10;
+    public float explosionUpModifier = 3;
+
+    public int scoreDeaths = 0;
+    public int scoreDoorPoint = 0;
+    public int scoreShotsFired = 0;
+
     public int Level = -1;
 
     public List<Wave> HordeWaves = new List<Wave>(); //Each item in the array will be an array of enemies to send.

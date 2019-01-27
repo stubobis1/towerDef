@@ -10,6 +10,15 @@ public class Esplosems : MonoBehaviour
     public float upwardsModifier = 3;
     public int ammo = 1;
 
+    private void Start()
+    {
+        if(GameManager.Instance != null)
+        {
+            this.power = GameManager.Instance.explosionForce;
+            this.radius = GameManager.Instance.explosionRadius;
+            this.upwardsModifier = GameManager.Instance.explosionUpModifier;
+        }
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if(ammo > 0)
@@ -30,9 +39,16 @@ public class Esplosems : MonoBehaviour
             if (rb != null)
                 rb.AddExplosionForce(power, explosionPos, radius, upwardsModifier);
             print("boom");
+
             // play sound
-            // set to dead.
-            // tally dead
+            var killable = hit.gameObject.GetComponent<AIMovement>();
+            if ( killable != null)
+            {
+                // set to dead.
+                Destroy(killable);
+                // tally dead
+                GameManager.Instance.scoreDeaths++;
+            }
         }
     }
 }

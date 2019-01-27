@@ -35,6 +35,7 @@ public class ThrowController : MonoBehaviour
     
     void Fire()
     {
+        GameManager.Instance.scoreShotsFired++;
         var index = Random.Range(0, this.components.Count);
         var obj = Instantiate(this.components[index]);
         obj.gameObject.AddComponent<Esplosems>();
