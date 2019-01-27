@@ -14,7 +14,6 @@ public class AIManager : MonoBehaviour
     public int EnemyIndex = 0;
     public float SendInterval = 3f;
 
-    private float timeToSendNext;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,28 +23,23 @@ public class AIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (activelySending)
+       
+    }
+
+    public void SendWave(GameObject[] EnemiesInWave)
+    {
+        foreach (var e in EnemiesInWave)
         {
-            if (Time.time > timeToSendNext)
-            {
-                if (EnemyIndex + 1 <= EnemiesInWave.Length)
-                {
-                    timeToSendNext = Time.time + SendInterval;
-                    var pos = waypoints.Waypoints[0].transform.position;
-                    var ai = Instantiate(EnemiesInWave[EnemyIndex], this.transform);
-                    ai.transform.position = pos;
-                    ai.GetComponent<IHasWaypoints>().Waypoints = this.waypoints;
-                    EnemyIndex++;
-                }
-                else
-                {
-                    GameManager.Instance.FinishedLevel();
-                    
-                    //reset
-                    this.activelySending = false;
-                    EnemyIndex = 0;
-                }
-            }
+            var maxpos = waypoints.Waypoints[0].GetComponent<BoxCollider>().bounds.max;
+            var minpos = waypoints.Waypoints[0].GetComponent<BoxCollider>().bounds.min;
+            var pos = new Vector3(
+                Random.Range(minpos.x,maxpos.x),
+                Random.Range(minpos.y,maxpos.y),
+                Random.Range(minpos.z,maxpos.z)
+            );
+            var ai = Instantiate(e, this.transform);
+            ai.transform.position = pos;
+            ai.GetComponent<IHasWaypoints>().Waypoints = this.waypoints;
         }
     }
 }
