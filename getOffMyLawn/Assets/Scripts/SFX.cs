@@ -6,7 +6,10 @@ public class SFX : MonoBehaviour
 
     public static SFX Instance;
     public AudioSource source;
-    public AudioClip explostionSound;
+    public AudioClip[] explostionSounds;
+    public AudioClip[] throwSounds;
+    public AudioClip BGM;
+    
     // Use this for initialization
     void Start()
     {
@@ -16,6 +19,10 @@ public class SFX : MonoBehaviour
 
     public void Explode()
     {
-        source.PlayOneShot(explostionSound);
+        source.PlayOneShot(explostionSounds[Random.Range(0,explostionSounds.Length)]);
+    }
+    public void Throw()
+    {
+        source.PlayOneShot(explostionSounds[Random.Range(0,throwSounds.Length)]);
     }
 }
