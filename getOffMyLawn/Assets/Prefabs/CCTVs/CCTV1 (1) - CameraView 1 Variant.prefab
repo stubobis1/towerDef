@@ -24,7 +24,7 @@ PrefabInstance:
     - target: {fileID: 5211522275670510895, guid: 6641479261d6c3241a5b9a1455e64779,
         type: 3}
       propertyPath: m_Name
-      value: CCTV1 (1) - CameraView 1
+      value: CCTV1 (1) - CameraView 1 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5211522275670510891, guid: 6641479261d6c3241a5b9a1455e64779,
         type: 3}
@@ -91,16 +91,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.100000106
       objectReference: {fileID: 0}
-    - target: {fileID: 5211522275150913895, guid: 6641479261d6c3241a5b9a1455e64779,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.x
-      value: 0.09
-      objectReference: {fileID: 0}
     - target: {fileID: 5211522275150913897, guid: 6641479261d6c3241a5b9a1455e64779,
         type: 3}
       propertyPath: material
       value: 
       objectReference: {fileID: 2100000, guid: 4998d71c74820b84d90979168af84c46, type: 2}
+    - target: {fileID: 5211522275150913895, guid: 6641479261d6c3241a5b9a1455e64779,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0.09
+      objectReference: {fileID: 0}
     - target: {fileID: 5211522275110297925, guid: 6641479261d6c3241a5b9a1455e64779,
         type: 3}
       propertyPath: m_TargetTexture
