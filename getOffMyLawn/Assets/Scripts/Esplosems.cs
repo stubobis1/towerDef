@@ -29,6 +29,7 @@ public class Esplosems : MonoBehaviour
         }
     }
 
+    public float massReduction = 20f;
     public void boom()
     {
         
@@ -41,7 +42,11 @@ public class Esplosems : MonoBehaviour
             Rigidbody rb = hit.GetComponent<Rigidbody>();
 
             if (rb != null)
+            {
                 rb.AddExplosionForce(power, explosionPos, radius, upwardsModifier);
+                rb.mass = rb.mass / massReduction;
+            }
+
             print("boom");
 
             // play sound
