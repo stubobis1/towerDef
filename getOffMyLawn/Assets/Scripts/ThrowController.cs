@@ -43,6 +43,8 @@ public class ThrowController : MonoBehaviour
     void Fire()
     {
         GameManager.Instance.scoreShotsFired++;
+        SFX.Instance.source.PlayOneShot(SFX.Instance.explostionSound);
+        
         var index = Random.Range(0, this.components.Count);
         var obj = Instantiate(this.components[index]);
         obj.gameObject.AddComponent<Esplosems>();
@@ -51,7 +53,6 @@ public class ThrowController : MonoBehaviour
         var rb = obj.GetComponent<Rigidbody>();
         if (!rb)
             throw new System.Exception("created obj does not have rigid body");
-        //rb.AddForce(this.playerCam.transform.forward * this.power, ForceMode.Impulse);
         rb.velocity = this.playerCam.transform.forward * this.power;
         var rotForce = 10000f * Random.value;
         rb.AddTorque(new Vector3(Random.value * rotForce, Random.value * rotForce, Random.value * rotForce));
