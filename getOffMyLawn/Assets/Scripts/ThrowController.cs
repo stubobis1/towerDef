@@ -19,6 +19,8 @@ public class ThrowController : MonoBehaviour
             throw new System.Exception("we need somthing to throw");
         if (!throwPoint)
             throwPoint = playerCam.transform;
+
+        SFX.Instance.source.PlayOneShot(SFX.Instance.BGM);
     }
 
     // Update is called once per frame
@@ -43,7 +45,7 @@ public class ThrowController : MonoBehaviour
     void Fire()
     {
         GameManager.Instance.scoreShotsFired++;
-        SFX.Instance.source.PlayOneShot(SFX.Instance.explostionSound);
+        SFX.Instance.Explode();
         
         var index = Random.Range(0, this.components.Count);
         var obj = Instantiate(this.components[index]);
