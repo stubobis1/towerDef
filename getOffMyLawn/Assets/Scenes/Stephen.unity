@@ -1179,6 +1179,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4456837003051435573, guid: 8fda285f308aa9840b5da154797b4cd0,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fda285f308aa9840b5da154797b4cd0, type: 3}
 --- !u!1001 &757269458
@@ -1530,6 +1535,12 @@ MonoBehaviour:
   Enemy3: {fileID: 0}
   Enemy4: {fileID: 0}
   Enemy5: {fileID: 0}
+  explosionRadius: 5
+  explosionForce: 10
+  explosionUpModifier: 3
+  scoreDeaths: 0
+  scoreDoorPoint: 0
+  scoreShotsFired: 0
   Level: 0
 --- !u!4 &1157010182
 Transform:
