@@ -1,15 +1,20 @@
 fileFormatVersion: 2
-guid: 149b0befb83bc7a4b9879d65e66c3100
+guid: f63238375ad603049bec6fef0ce5edfd
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: dirt
+    2100000: cobblestone.002
     2300000: //RootNode
     3300000: //RootNode
-    4300000: pathBase
-  externalObjects: {}
+    4300000: Untitled
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cobblestone.002
+    second: {fileID: 2100000, guid: 32ce2ee8f5e08ad4982c642fcc142182, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
