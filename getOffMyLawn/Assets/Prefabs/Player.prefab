@@ -223,9 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f216cf2323267248b0a5485a5111d9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 0
-  initPower: 0
-  increaseRate: 0.7
+  power: 45
   components:
   - {fileID: 9187061567265146792, guid: 00232c8c64b4f2e45b98cb4bd30db660, type: 3}
   - {fileID: 1919378551699701953, guid: 04cd9611d2b3e104bac62482a6e08fab, type: 3}
@@ -240,7 +238,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  cooldown: 0.1
+  cooldown: 0.3
 --- !u!1 &8002044749390204948
 GameObject:
   m_ObjectHideFlags: 0
