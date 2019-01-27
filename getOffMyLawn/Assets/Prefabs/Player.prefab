@@ -225,14 +225,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   power: 0
   initPower: 0
-  increaseRate: 0.5
+  increaseRate: 0.7
   components:
   - {fileID: 9187061567265146792, guid: 00232c8c64b4f2e45b98cb4bd30db660, type: 3}
-  - {fileID: 2420518077523226661, guid: 58307857d2bbb864da8a5090edc4fe80, type: 3}
+  - {fileID: 1919378551699701953, guid: 04cd9611d2b3e104bac62482a6e08fab, type: 3}
   - {fileID: 4398299596996157658, guid: 38a7c401944a67047bbb4d4e696be1cb, type: 3}
   - {fileID: 7102940967190349023, guid: eb797b9497ca40a42bf8e0dc59b060fd, type: 3}
-  - {fileID: 7918141462299981882, guid: 7c9d53fd675aafb44aa2fbd88a2848d4, type: 3}
-  - {fileID: 1919378551699701953, guid: 04cd9611d2b3e104bac62482a6e08fab, type: 3}
   - {fileID: 5211381418113999543, guid: b1af417780b15bf47a3be1a00fc19550, type: 3}
   playerCam: {fileID: 0}
   throwPoint: {fileID: 4679719490534923169}
@@ -242,7 +240,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  cooldown: 0.5
+  cooldown: 0.1
 --- !u!1 &8002044749390204948
 GameObject:
   m_ObjectHideFlags: 0
