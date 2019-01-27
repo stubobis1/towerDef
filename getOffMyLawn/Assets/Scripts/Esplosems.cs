@@ -8,6 +8,8 @@ public class Esplosems : MonoBehaviour
     public float radius = 10;
     public float power = 1000;
     public float upwardsModifier = 3;
+
+    public ParticleSystem particleEffect;
     public int ammo = 1;
 
     private void Start()
