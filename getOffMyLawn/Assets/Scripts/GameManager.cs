@@ -91,7 +91,11 @@ public class GameManager : MonoBehaviour
             getArrayOfUnit(Enemy1, 25)
         ));
         l.Add(new Wave(
-            5f, 
+            1f,
+            getArrayOfUnit(Enemy2, 25)
+        ));
+        l.Add(new Wave(
+            4f, 
             getArrayOfUnit(Enemy1, 25)
         )); 
 
