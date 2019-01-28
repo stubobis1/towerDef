@@ -200,6 +200,11 @@ public class GameManager : MonoBehaviour
     public void EnemyGotThrough(GameObject enemy)
     {
         currentCash -= cashPerLoss;
+        if (currentCash < 0)
+        {
+            GameOver();
+        }
+
         scoreDoorPoint++;
         SFX.Instance.ChaChing();
         
