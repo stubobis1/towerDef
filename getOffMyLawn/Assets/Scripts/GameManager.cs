@@ -222,9 +222,11 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        SceneManager.LoadScene("GameOver",LoadSceneMode.Additive);
-    }
 
+        GameObject obj = GameObject.FindGameObjectWithTag("endGame");
+        obj.SetActive(true);
+        SceneManager.LoadScene("GameOver", LoadSceneMode.Additive);
+    }
 
     // Update is called once per frame
 
