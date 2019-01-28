@@ -222,7 +222,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene("GameOver",LoadSceneMode.Additive);
     }
 
 
