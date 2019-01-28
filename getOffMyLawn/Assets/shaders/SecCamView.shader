@@ -86,7 +86,7 @@
       
             fixed4 frag (v2f_img i) : SV_Target
             {
-                 float phase = _Time * 30.4;
+                 float phase = (_Time * 4.4 ) + 10.0;
                 float pixelcolor = tex2D(_CameraView, i.uv);
                 i.uv *= _GridSize * (phase * .6);
                 i.uv += float2(sin(_X * phase) * .50, cos(_Y * phase)*.50);
