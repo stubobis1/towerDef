@@ -222,7 +222,8 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-
+        SceneManager.LoadScene("GameOver");
+        return;
         GameObject obj = GameObject.FindGameObjectWithTag("endGame");
         obj.SetActive(true);
         SceneManager.LoadScene("GameOver", LoadSceneMode.Additive);
